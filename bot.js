@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 const axios = require("axios");
 const botOn = require("./controllers/botOn");
 const botOff = require("./controllers/botOff");
