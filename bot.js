@@ -2,15 +2,14 @@ require("dotenv").config();
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
-const axios = require("axios");
+
 const botOn = require("./controllers/botOn");
 const botOff = require("./controllers/botOff");
-const bot = require('./others/connectBot');
-const User = require("./Models/user");
+
 const connectDB = require('./config/dbConfig');
 const path = require("path");
 const bodyParser = require('body-parser');
-const Settings = require("./Models/settings");
+
 const userRoutes = require("./routes/userRoutes");
 const settingsRoutes = require("./routes/settingsRoutes");
 const { setupInterval } = require('./controllers/settingsControllers');

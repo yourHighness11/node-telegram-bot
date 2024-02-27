@@ -1,6 +1,5 @@
 const User = require("../Models/user");
 const bot = require("../others/connectBot");
-const getBot = require("../others/connectBot");
 
 
 
@@ -53,7 +52,6 @@ const blockOrUnblockUser = async (req, res) => {
 const deleteUser = async (req, res) => {
     // Delete a user by ID
     const userId = req.params.id;
-    const bot = await getBot();
     try {
         bot.sendMessage(userId, 'Account deleted! by admin.');
         await User.findOneAndDelete({ id: userId });
